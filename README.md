@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-# Para La instalacion del proyecto
- se debe instalar las gemas 
- con 
-bundle install
-
- despues crear las Base de datos y las migraciones con los seed
-rails db:create db:migrate db:seed
-=======
 ## Instalación del Proyecto
 
 Para configurar este proyecto en tu entorno local, sigue estos pasos:
@@ -22,5 +13,3 @@ Para configurar este proyecto en tu entorno local, sigue estos pasos:
    rails db:create
    rails db:migrate
    rails db:seed
-
->>>>>>> b1fba4badfb9fc21a5a6f795d49b42d6968ab772
