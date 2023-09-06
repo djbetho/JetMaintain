@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+require 'pagy/extras/bootstrap'
 # Pagy initializer file (6.0.4)
 # Customize only what you really need and notice that the core Pagy works also without any of the following lines.
 # Should you just cherry pick part of this file, please maintain the require-order of the extras
@@ -11,11 +11,9 @@
 # Pagy.new|Pagy::Countless.new|Pagy::Calendar::*.new or any of the #pagy* controller methods
 
 
-# Instance variables
-# See https://ddnexus.github.io/pagy/docs/api/pagy#instance-variables
-# Pagy::DEFAULT[:page]   = 1                                  # default
-# Pagy::DEFAULT[:items]  = 20                                 # default
-# Pagy::DEFAULT[:outset] = 0                                  # default
+Pagy::DEFAULT[:items] = 5        # items per page
+Pagy::DEFAULT[:size]  = [1,4,4,1] # nav bar links
+ 
 
 
 # Other Variables

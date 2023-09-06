@@ -3,6 +3,12 @@ class MaintenancesController < ApplicationController
   before_action :set_materials, only: %i[ new edit create update]
   before_action :set_cities, only: %i[ new edit create update]
   before_action :set_engines, only: %i[ new edit create update]
+  before_action :authenticate_user!, except: %i[ new edit create update ]
+
+  before_action only: [:destroy ] do
+    authorize_request(["operador"])
+   end
+
 
 
   # GET /maintenances or /maintenances.json
@@ -84,5 +90,5 @@ class MaintenancesController < ApplicationController
      def set_engines
       @engines = Engine.all
     end
- 
+
 end

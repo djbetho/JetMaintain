@@ -57,4 +57,39 @@
 #       Engine.create(engine_type: "Motor turbohélice.", name: "TURBO-#{n/2 + 1}", description: "Descripción para Motor turbohélice #{n/2 + 1}")
 #     end
 #   end
+  # db/seeds.rb
+
+# Métodos auxiliares para generar nombres y fechas aleatorias
+=begin def random_maintenance_name(typeengine)
+    if typeengine == "Motor a reaccion"
+      "REAC-#{rand(1..1000)}"
+    elsif typeengine == "Motor turbohelice"
+      "TURBO-#{rand(1..1000)}"
+    else
+      "NombreDesconocido"
+    end
+  end
   
+  def random_date
+    rand(1..365).days.ago.to_date
+  end
+  
+  # Crear 100 registros aleatorios
+  100.times do
+    typeengine = ["Motor a reacción", "Motor turbohélice"].sample
+    namemaintenance = random_maintenance_name(typeengine)
+    dateexecute = random_date
+    engines_id = rand(1..21)
+    cities_id = rand(1..6)
+    users_id = rand(1..11)
+  
+    Maintenance.create(
+      typeengine: typeengine,
+      namemaintence: namemaintenance,
+      dateexecute: dateexecute,
+      engines_id: engines_id,
+      cities_id: cities_id,
+      users_id: users_id
+    )
+  end
+   =end

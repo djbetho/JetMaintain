@@ -1,9 +1,16 @@
 class EnginesController < ApplicationController
   before_action :set_engine, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
+
+  before_action only: [:edit, :update ,:destroy ,:create] do
+    authorize_request(["admin"])
+   end
 
   # GET /engines or /engines.json
   def index
-    @engines = Engine.all
+      
+    @pagy, @engines = pagy(Engine.all) 
+
   end
 
   # GET /engines/1 or /engines/1.json
@@ -65,6 +72,6 @@ class EnginesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def engine_params
-      params.require(:engine).permit(:type, :name, :description, images: [])
+      params.require(:engine).permit(:type, :name, :description, :image)
     end
 end

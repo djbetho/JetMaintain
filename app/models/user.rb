@@ -12,3 +12,4 @@ class User < ApplicationRecord
     self.role ||= :operator
   end  
 end
+ 

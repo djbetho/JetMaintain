@@ -13,5 +13,21 @@
     <strong>Description:</strong>
     <%= engine.description %>
   </p>
+  <p>
+ 
+
+
+
+    <% if engine.image.persisted? %>
+    <%=  image_tag engine.image,    width: "20%"   %> 
+    <% else%>
+    <img src="https://placehold.co/40x40" alt="Avatar",  width="20%" >
+
+    <% end %>
+
+
+
+
+  </p>
 
 </div>
