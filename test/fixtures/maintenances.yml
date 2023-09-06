@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  typeengine: MyString
+  namemaintence: MyString
+  dateexecute: 2023-09-06
+  engines: one
+  cities: one
+  users: one
+
+two:
+  typeengine: MyString
+  namemaintence: MyString
+  dateexecute: 2023-09-06
+  engines: two
+  cities: two
+  users: two

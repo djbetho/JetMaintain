@@ -1,0 +1,36 @@
+<div id="<%= dom_id maintenance %>">
+  <p>
+    <strong>Typeengine:</strong>
+    <%= maintenance.typeengine %>
+  </p>
+
+  <p>
+    <strong>Namemaintence:</strong>
+    <%= maintenance.namemaintence %>
+  </p>
+
+  <p>
+    <strong>Dateexecute:</strong>
+    <%= maintenance.dateexecute %>
+  </p>
+
+  <p>
+    <strong>Engines:</strong>
+    <%= maintenance.engines_id %>
+  </p>
+
+  <p>
+    <strong>Cities:</strong>
+    <%= maintenance.cities_id %>
+  </p>
+
+  <p>
+    <strong>Users:</strong>
+    <%= maintenance.users_id %>
+  </p>
+  <div>
+  <%= form.label :materials, style: "display: block" %>
+  <%= form.select :materials_ids, options_from_collection_for_select(@materials,:id, :name) %>
+</div>
+
+</div>
